@@ -1,0 +1,59 @@
+/* style.css - basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background: #f7f7f7;
+  color: #333;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #0f33fe;
+  color: white;
+  padding: 10px 20px;
+}
+.heading{
+  text-align: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+nav a {
+  color: white;
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.team-photo {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-left: 400px;
+
+  align-items: center;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background: #0f62fe;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  align-content: center;
+  align-items: center;
+}

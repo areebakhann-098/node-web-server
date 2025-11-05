@@ -1,26 +1,13 @@
 import express from "express";
-import path from "path";
-import {fileURLToPath} from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const app = express();
+const PORT = 3000;
 
-const app= express();
-const PORT = 3000
+app.use(express.static("./public"));
 
-app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req, res)=>{
-    res.sendFile(path.join(__dirname, "public", "index.html"));
+app.use((req, res) => {
+  res.status(404).send("Page Not Found!");
 });
 
-app.get("/about",(req,res)=>
-{
-    res.sendFile(path.join(__dirname, "public", "about.html"));
-});
-app.get("/contact", (req,res)=>{
-    res.sendFile(path.join(__dirname, "public", "contact.html"));
-});
-app.listen(PORT, ()=>{
-    console.log(`server is running at http://localhost:${PORT}`)
-})
+app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));

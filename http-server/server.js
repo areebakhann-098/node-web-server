@@ -27,13 +27,6 @@ res.end(data);
     const ext = path.extname(filePath);
     let contentType = "text/html";
 
-
-if (ext=== ".css") contentType="text/css";
-else if (ext === ".js") contentType="appllication/javascript";
-else if (ext===".png") contentType="image/png";
-  else if (ext === ".jpg" || ext === ".jpeg") contentType = "image/jpeg";
-
-
     switch(ext){
         case ".css":
             contentType = "text/css";
